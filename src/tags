@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFFER_SIZE	client.c	13;"	d	file:
+BUFFER_SIZE	host.c	14;"	d	file:
+CFLAGS	Makefile	/^CFLAGS=-ggdb$/;"	m
+CHAT_START	protocol.h	7;"	d
+CLIENT	peerchat.c	/^enum role { HOST, CLIENT };$/;"	e	enum:role	file:
+CLIENT_H	client.h	6;"	d
+CONNECT	protocol.h	14;"	d
+DISCONNECT	protocol.h	15;"	d
+DISPATCHER_H	dispatcher.h	6;"	d
+HOST	peerchat.c	/^enum role { HOST, CLIENT };$/;"	e	enum:role	file:
+HOST_H	host.h	6;"	d
+MAX_PEERS	config.h	22;"	d
+MIGRATE	protocol.h	16;"	d
+MIGRATION_ENABLED	config.h	31;"	d
+MSG_END	protocol.h	8;"	d
+PEERCHAT_VERSION	peerchat.c	23;"	d	file:
+PEER_H	peer.h	6;"	d
+QUEUE_H	queue.h	6;"	d
+QUEUE_SIZE	queue.h	11;"	d
+SOCKETS_DIRECTORY	config.h	15;"	d
+SOURCEFILES	Makefile	/^SOURCEFILES=peerchat.c client.c host.c queue.c peer.c$/;"	m
+SPECIAL_START	protocol.h	6;"	d
+UNIX_PATH_MAX	peerchat.c	22;"	d	file:
+USE_COLOR	config.h	37;"	d
+WHO	protocol.h	17;"	d
+add_peer	peer.c	/^void add_peer(peer_list_t *list, peer_t *new_peer)$/;"	f
+check_options	peerchat.c	/^static inline bool check_options()$/;"	f	file:
+dequeue	dispatcher.c	/^static entry_t *dequeue(queue_t *q)$/;"	f	file:
+dest_fd	queue.h	/^	int	dest_fd;$/;"	m	struct:queue_item
+dispatch	dispatcher.c	/^void dispatch(peer_list_t *plist, queue_t *q)$/;"	f
+end	queue.h	/^	size_t		end;			\/\/ index of next free slot$/;"	m	struct:queue
+enqueue	queue.c	/^bool enqueue(queue_t *q, int fd, char *s)$/;"	f
+entries	queue.h	/^	queue_item_t	*entries[QUEUE_SIZE];$/;"	m	struct:queue
+fd	peer.h	/^	int fd;			\/\/ socket over which to write to this peer$/;"	m	struct:peer
+get_peers	peer.c	/^peer_t **get_peers(peer_list_t *list)$/;"	f
+handle_connection	host.c	/^bool handle_connection(int fd, peer_t *this_peer)$/;"	f
+handle_signal	peerchat.c	/^static void handle_signal(int signal)$/;"	f	file:
+head	peer.h	/^	peer_t *head;$/;"	m	struct:peer_list
+help_mode	peerchat.c	/^	bool help_mode;$/;"	m	struct:program_options	file:
+init_peer_list	peer.c	/^void init_peer_list(peer_list_t *list)$/;"	f
+init_queue	queue.c	/^void init_queue(queue_t *q)$/;"	f
+list_mode	peerchat.c	/^	bool list_mode;$/;"	m	struct:program_options	file:
+main	peerchat.c	/^int main(int argc, char *argv[])$/;"	f
+next	peer.h	/^	struct peer *next;	\/\/ next peer in linked list$/;"	m	struct:peer	typeref:struct:peer::peer
+num_items	queue.h	/^	size_t		num_items;$/;"	m	struct:queue
+num_peers	peer.h	/^	size_t num_peers;$/;"	m	struct:peer_list
+options	peerchat.c	/^struct program_options options;$/;"	v	typeref:struct:program_options
+parse_options	peerchat.c	/^static void parse_options(int count, char *args[])$/;"	f	file:
+peer	peer.h	/^typedef struct peer {$/;"	s
+peer_list	peer.h	/^typedef struct peer_list {$/;"	s
+peer_list_t	peer.h	/^} peer_list_t;$/;"	t	typeref:struct:peer_list
+peer_t	peer.h	/^} peer_t;$/;"	t	typeref:struct:peer
+print_error	peerchat.c	/^void print_error(char *str)$/;"	f
+print_list	peerchat.c	/^static bool print_list()$/;"	f	file:
+print_usage	peerchat.c	/^static inline void print_usage()$/;"	f	file:
+process_connect	host.c	/^size_t process_connect(char *buf, size_t max, char **username)$/;"	f
+program_options	peerchat.c	/^struct program_options {$/;"	s	file:
+queue	queue.h	/^typedef struct queue {$/;"	s
+queue_item	queue.h	/^typedef struct queue_item {$/;"	s
+queue_item_t	queue.h	/^} queue_item_t;$/;"	t	typeref:struct:queue_item
+queue_t	queue.h	/^} queue_t;$/;"	t	typeref:struct:queue
+remove_peer	peer.c	/^void remove_peer(peer_list_t *list, peer_t *to_remove)$/;"	f
+role	peerchat.c	/^enum role { HOST, CLIENT };$/;"	g	file:
+room	peerchat.c	/^	char *room;$/;"	m	struct:program_options	file:
+setup_client	client.c	/^int setup_client(int fd, struct sockaddr_un address, peer_t *me)$/;"	f
+setup_host	host.c	/^int setup_host(int fd, struct sockaddr_un address, peer_t *host)$/;"	f
+socket_path	peerchat.c	/^char *socket_path;		\/\/ path to socket handling\/connecting to$/;"	v
+start	queue.h	/^	size_t		start;			\/\/ index of next item to go$/;"	m	struct:queue
+str	queue.h	/^	char	*str;$/;"	m	struct:queue_item
+this_role	peerchat.c	/^enum role this_role;		\/\/ set accordingly before listening\/connecting$/;"	v	typeref:enum:role
+username	peer.h	/^	char *username;		\/\/ username of connected peer$/;"	m	struct:peer
+verbose	peerchat.c	/^	bool verbose;$/;"	m	struct:program_options	file:
